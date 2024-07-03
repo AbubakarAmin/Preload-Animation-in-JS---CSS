@@ -1,0 +1,82 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.preloader{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(92, 203, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cloud1,.cloud2,.cloud3{
+    height: 100px;
+    position: absolute;
+    right: 0%;
+    transform: translate(100%,-50%);
+    z-index: -1;
+}
+.cloud1{
+    top: 20%;
+    transform: translate(100%,-50%);
+    animation: animatedcloud 4s ease infinite;
+}
+.cloud2{
+    top: 50%;
+    transform: translate(100%,-50%);
+    animation: animatedcloud 4s ease 1.5s infinite
+}
+.cloud3{
+    top: 75%;
+    transform: translate(100%,-50%);
+    animation: animatedcloud 4s ease 2.5s infinite
+}
+.airplane{
+    height:200px;
+    animation: animatedplane 2s ease infinite }
+
+@keyframes animatedplane {
+0%{
+    transform: translate(0px,0px);
+} 
+50%{
+    transform:translate(0px,-50%)
+}   
+100%{
+    transform: translate(0px,0px);
+}}
+@keyframes animatedcloud {
+    0%{
+        right: 0%;
+    } 
+    100%{
+    right: 120%;
+    }   
+    }
+.preloader h1{
+    position: absolute;
+    top: 70%    ;
+    color: antiquewhite;
+    font-family: sans-serif;
+
+
+}
+.airport{
+    font-family: sans-serif;
+    padding: 50px;
+}
+
+.finish{
+    opacity: 0;
+    pointer-events: none;
+}
+.airport img{
+    object-fit: cover;
+width: 500px;
+}
